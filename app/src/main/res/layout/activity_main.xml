@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadPoolExecutor Demo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitTaskBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Task" />
+
+    <!-- Shutdown Button -->
+    <Button
+        android:id="@+id/shutdownBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shutdown Executor"
+        android:layout_marginTop="8dp" />
+
+    <!-- Delay Range Label -->
+    <TextView
+        android:id="@+id/delayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max Delay (ms):"
+        android:layout_marginTop="16dp" />
+
+    <!-- Delay Slider -->
+    <SeekBar
+        android:id="@+id/delayRangeSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="4000" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Log Output Scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F0F0F0"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/logView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:typeface="monospace"
+            android:textIsSelectable="true" />
+    </ScrollView>
+
+</LinearLayout>
